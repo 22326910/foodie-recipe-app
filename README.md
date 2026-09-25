@@ -15,6 +15,10 @@ npm start
 
 For the web version, run `npm run web`. For a phone, scan the QR code printed by Expo with Expo Go.
 
+## Review in Snack
+
+Open [Foodie in Snack](https://snack.expo.dev/@git/github.com/22326910/foodie-recipe-app), or choose **Project → Import git repository** at [snack.expo.dev](https://snack.expo.dev/) and enter `https://github.com/22326910/foodie-recipe-app`. Select the Web preview or run it in Expo Go. The project targets Expo SDK 54 for Snack compatibility.
+
 ## Features
 
 - Main feed with public recipes, search, and horizontal categories
