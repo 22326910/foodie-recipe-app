@@ -30,6 +30,3 @@ Open [Foodie in Snack](https://snack.expo.dev/@git/github.com/22326910/foodie-re
 
 The public feed needs an internet connection. Your own recipes and favorites stay available on this device offline. DummyJSON supplies sample data, not a shared user database.
 
-## Project notes
-
-This project does not contain code, images, or other assets from the unrelated `mathiramilo/foodie` delivery app ZIP. The screen references informed the layout and colors only.
