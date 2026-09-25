@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Foodie Recipes",
+    "slug": "foodie-recipes",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#FFFFFF",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "name": "Foodie Recipes",
+      "shortName": "Foodie",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Foodie Recipes to use a photo for a recipe you save on this device.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}
