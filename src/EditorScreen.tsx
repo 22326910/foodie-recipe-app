@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { File, Paths } from 'expo-file-system';
 import * as ImagePicker from 'expo-image-picker';
-import { Platform, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { ActionButton, BackButton, RecipeImage } from './components';
 import { colors } from './theme';
 import type { Recipe, RecipeDraft } from './types';
@@ -39,18 +38,11 @@ export function EditorScreen({ recipe, onBack, onSave }: {
         mediaTypes: ['images'],
         allowsEditing: true,
         quality: 0.65,
-        base64: Platform.OS === 'web',
+        base64: true,
       });
       if (result.canceled || !result.assets.length) return;
       const asset = result.assets[0];
-      if (Platform.OS === 'web') {
-        set('image', asset.base64 ? `data:${asset.mimeType || 'image/jpeg'};base64,${asset.base64}` : asset.uri);
-      } else {
-        const extension = asset.mimeType === 'image/png' ? 'png' : 'jpg';
-        const destination = new File(Paths.document, `foodie-${Date.now()}.${extension}`);
-        await new File(asset.uri).copy(destination);
-        set('image', destination.uri);
-      }
+      set('image', asset.base64 ? `data:${asset.mimeType || 'image/jpeg'};base64,${asset.base64}` : asset.uri);
       setError('');
     } catch {
       setError('Could not use that photo. You can paste an image URL instead.');
